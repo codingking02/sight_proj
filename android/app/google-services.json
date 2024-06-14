@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "741303325130",
+    "project_id": "sightseer-project",
+    "storage_bucket": "sightseer-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741303325130:android:338e3c4d39f7550d1cff33",
+        "android_client_info": {
+          "package_name": "com.example.sight_proj"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCE5wWiGOP4yf_1800G_gRwdHgm_ezWYKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
