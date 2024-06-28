@@ -8,14 +8,9 @@ import 'package:sight_proj/details.dart';
 import 'package:sight_proj/homescreen.dart';
 import 'package:sight_proj/resultscreen.dart';
 import 'package:sight_proj/splashscreen.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
   runApp(const MyApp());
 }
 
@@ -27,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Text Recognition',
-      home: HomeScreen(),
+      home: MainScreen(),
     );
   }
 }

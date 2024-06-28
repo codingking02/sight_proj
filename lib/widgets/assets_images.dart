@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 Widget pngimage(String imagename) {
   return Image.asset("assets/$imagename.png");
 }
 
 Widget svgimage(String imagename) {
-  return SvgPicture.asset("assets/$imagename.svg");
+  return Image.asset("assets/$imagename.svg");
 }
 
 Widget getbutton(String text) {
