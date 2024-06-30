@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sight_proj/verify/login.dart';
-import 'package:sight_proj/verify/register.dart';
-import 'package:sight_proj/widgets/assets_images.dart';
+import 'package:sight_proj/assets.dart';
+import 'package:sight_proj/login.dart';
+import 'package:sight_proj/register.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,6 +9,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffEFF5EE),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,

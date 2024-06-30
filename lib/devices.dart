@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sight_proj/assets.dart';
 import 'package:sight_proj/details.dart';
-import 'package:sight_proj/widgets/assets_images.dart';
 
 class Devices extends StatefulWidget {
   Devices({super.key});

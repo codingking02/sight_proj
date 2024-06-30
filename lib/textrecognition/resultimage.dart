@@ -88,7 +88,9 @@ class _ResultImageState extends State<ResultImage> {
               },
               child: Text(
                 'Extract Text',
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(
+                  color: Colors.white,
+                ),
               ),
               style: ButtonStyle(
                 backgroundColor: WidgetStatePropertyAll(
@@ -117,7 +119,10 @@ class _ResultImageState extends State<ResultImage> {
                   );
                 }
               },
-              child: Text('Extract Face'),
+              child: Text(
+                'Extract Face',
+                style: TextStyle(color: Colors.white),
+              ),
               style: ButtonStyle(
                 backgroundColor: WidgetStatePropertyAll(
                   Color(

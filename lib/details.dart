@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:sight_proj/widgets/assets_images.dart';
+import 'package:sight_proj/assets.dart';
 
 class Details extends StatelessWidget {
   const Details({super.key});

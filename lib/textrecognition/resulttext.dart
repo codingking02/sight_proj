@@ -1,16 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
-class ResultPage extends StatelessWidget {
+class ResultPage extends StatefulWidget {
   final String text;
-  final FlutterTts flutterTts = FlutterTts();
 
   ResultPage({required this.text});
 
   @override
+  State<ResultPage> createState() => _ResultPageState();
+}
+
+class _ResultPageState extends State<ResultPage> {
+  final FlutterTts flutterTts = FlutterTts();
+  @override
+  void initState() {
+    String displayText = widget.text
+        .replaceAll("Press the button to capture screenshot", "")
+        .replaceAll("Take Screenshot", "")
+        .replaceAll("screenshot taken", "");
+    // TODO: implement initState
+    super.initState();
+    speak(displayText.trim());
+  }
+
+  @override
   Widget build(BuildContext context) {
     // Process the text to remove unwanted phrases
-    String displayText = text
+    String displayText = widget.text
         .replaceAll("Press the button to capture screenshot", "")
         .replaceAll("Take Screenshot", "")
         .replaceAll("screenshot taken", "");
@@ -18,24 +34,22 @@ class ResultPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Recognized Text'),
+        centerTitle: true,
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: SingleChildScrollView(
-              child: Text(displayText.trim()),
+      body: Center(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: SingleChildScrollView(
+                child: Text(displayText.trim()),
+              ),
             ),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              speak(displayText.trim());
-            },
-            child: Text(
-              "Speak",
+            SizedBox(
+              height: 10,
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
